@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    width: 10%;
+    align-items: center;
+}
+
+.container .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.125vw;
+    height: 3vw;
+    background-size: cover;
+    background: url("../../logo.svg") center no-repeat;
+    animation: App-logo-spin linear infinite 4s;
+}
+
+.container .name {
+    color: rgba(0, 0, 0, 0.5019607843);
+    font-family: "Quicksand", serif;
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+
+@keyframes App-logo-spin {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}

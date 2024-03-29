@@ -1,0 +1,139 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vh;
+  padding: 1vh 0;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  border: 2px solid rgba(186, 186, 186, 0.3137254902);
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .mainComment {
+  display: flex;
+  padding-left: 15px;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.container .mainComment .avatar {
+  width: 15%;
+  aspect-ratio: 1/1;
+  border-radius: 20%;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px rgba(0, 0, 0, 0.062745098) solid;
+}
+
+.container .mainComment .textContainer {
+  display: flex;
+  padding-top: 0.5vh;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8vh;
+  flex: 1 0 0;
+}
+
+.container .mainComment .textContainer .userInfo {
+  display: flex;
+  padding: 0 1.2vh;
+  align-items: center;
+  gap: 0.8vh;
+  align-self: stretch;
+}
+
+.container .mainComment .textContainer .userInfo .userInfo__name {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-size: 0.9vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.container .mainComment .textContainer .userInfo .userInfo__identity {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 400;
+  font-size: 0.65vw;
+}
+
+.container .mainComment .textContainer .userInfo .useInfo__createdAt {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 0.4vw;
+}
+
+.container .mainComment .textContainer .contentContainer {
+  display: flex;
+  padding: 0 1.5vh;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.container .mainComment .textContainer .contentContainer .content {
+  flex: 1 0 0;
+}
+
+.container .mainComment .textContainer .otherInfoContainer {
+  display: flex;
+  height: 2vh;
+  padding: 0 1.5vh;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.container .mainComment .textContainer .otherInfoContainer .otherInfo__left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  gap: 1vh;
+}
+
+.container .mainComment .textContainer .otherInfoContainer .otherInfo__right {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+}
+
+.container .mainComment .textContainer .otherInfoContainer .otherInfo__right .reply {
+  aspect-ratio: 7/6;
+  height: 1.6vh;
+  background: url("../../assets/svg/global/reply.svg") center no-repeat;
+  background-size: contain;
+}
+
+.container .childContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vh;
+  align-self: stretch;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 110%, 0% 110%); /* Initial state */
+  height: 0;
+  transition: height 0.5s ease-in-out;
+  animation: childContainer--merge ease-in-out 0.8s;
+}
+
+@keyframes childContainer--merge {
+  0% {
+    flex-grow: 0;
+    opacity: 0;
+  }
+  100% {
+    flex-grow: 1;
+    opacity: 1;
+  }
+}

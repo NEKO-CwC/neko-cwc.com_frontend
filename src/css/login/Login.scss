@@ -1,0 +1,185 @@
+@import "../scss/const/font";
+
+$loginContainer-top: 2vw;
+
+
+.container {
+  pointer-events: none;
+  user-select: none;
+  z-index: 11;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: $loginContainer-top;
+  display: flex;
+  width: 25vw;
+  padding: 1vw 3.5vw 1.5vw 3.5vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //gap: 2vw;
+
+  border-radius: 20px;
+  border: 2px solid transparent;
+
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.70) 100%),
+  radial-gradient(150% 121.83% at 8.13% 1.86%, rgba(0, 255, 240, 0.20) 0%, rgba(255, 136, 243, 0.20) 100%);
+
+  box-shadow: 0 4px 20.4px 0 rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+
+  transition: height ease-in-out 0.8s;
+  animation: loginContainer-merge 1s;
+
+
+  .cancel {
+    //user-select: auto;
+    pointer-events: auto;
+    position: absolute;
+    right: 0.5vw;
+    top: 0.5vw;
+    width: 1.55vw;
+    height: 1.55vw;
+    background: url("../../assets/svg/login/cancel.svg") no-repeat center;
+    background-size: contain;
+    transform: rotate(0);
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      transform: rotate(135deg);
+    }
+  }
+
+  .contentInputContainer {
+    width: 100%;
+    height: 100%;
+
+    .gap {
+      width: 100%;
+      height: 2vw;
+      animation: inputContainerGapMerge 0.8s ease-in-out;
+      @keyframes inputContainerGapMerge {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: 2vw;
+        }
+      }
+    }
+
+    .logoContainer {
+      position: relative;
+      top: 1vw;
+      width: 100%;
+      height: 2.5vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .logo {
+        width: 4vw;
+        height: 4vw;
+        background: url("../../logo.svg") no-repeat center;
+        background-size: contain;
+      }
+    }
+
+    .continue {
+      pointer-events: auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 2.5vw;
+      border-radius: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.50);
+      background: rgba(255, 255, 255, 0.50);
+      transition: 0.2s;
+
+      box-shadow: 0 4px 4px 0 rgba(67, 67, 67, 0.25);
+
+      @include login-continue;
+
+      @keyframes headShake {
+        0% {
+          transform: translateX(0);
+        }
+
+        6.5% {
+          transform: translateX(-6px) rotateY(-9deg);
+        }
+
+        18.5% {
+          transform: translateX(5px) rotateY(7deg);
+        }
+
+        31.5% {
+          transform: translateX(-3px) rotateY(-5deg);
+        }
+
+        43.5% {
+          transform: translateX(2px) rotateY(3deg);
+        }
+
+        50% {
+          transform: translateX(0);
+        }
+      }
+
+      &:active {
+        box-shadow: 0px -2px 2px 0px rgba(67, 67, 67, 0.25);;
+      }
+
+      .continue__text {
+        content: "继续";
+        position: relative;
+        top: 2px;
+        transition: ease-in-out .5s;
+      }
+    }
+  }
+
+  .loginSuccessContainer {
+    display: flex;
+    flex-direction: column;
+
+    .loginSuccessContent {
+      font-family: WeiLaiYuan, serif;
+      font-weight: 500;
+      font-size: 1.5vw;
+    }
+  }
+
+  .singupSuccessContainer {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+@keyframes loginContainer-merge {
+  0% {
+    top: -50%;
+  }
+
+  100% {
+    top: $loginContainer-top;
+  }
+}
+
+@keyframes loginContainer-hide {
+  0% {
+    top: $loginContainer-top;
+  }
+
+  100% {
+    top: -50%;
+  }
+}
+
+:export {
+  loginContainer-hide: loginContainer-hide;
+  headShake: headShake
+}

@@ -1,0 +1,40 @@
+.container {
+    width: 5vw;
+    margin-right: 1vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .newBlog {
+    pointer-events: auto;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 4%;
+    width: 3.5vw;
+    height: 1.8vw;
+    border-radius: 11px;
+    border: 2px solid #00EBDD;
+    box-shadow: 0 4px 4px 0 rgba(161, 161, 161, 0.25);
+}
+
+.container .newBlog .newBlog__logo {
+    transform: translateY(1px);
+    opacity: 80%;
+    width: 25%;
+    height: 100%;
+    background: url("../../assets/svg/navigateBar/newBlog.svg") no-repeat center;
+    background-size: contain;
+}
+
+.container .newBlog .newBlog__text {
+    transform: translateY(2px);
+    font-family: "WeiLaiYuan", serif;
+    opacity: 80%;
+    font-size: 0.78vw;
+    font-style: normal;
+    font-weight: 400;
+}

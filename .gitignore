@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# 字体文件
+/public/fonts
+
+# 默认配置文件
+/public/blogs
+
+# 后端
+/backend
+/.idea

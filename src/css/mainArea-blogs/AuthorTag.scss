@@ -1,0 +1,18 @@
+@import "../scss/const/font";
+
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+
+  .tag {
+    width: auto;
+    white-space: nowrap;
+    padding: 0.3vw 0.5vw 0.2vw 0.5vw;
+    border-radius: 1vw;
+    @include blog-authorCard-tag;
+  }
+}
+

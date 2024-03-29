@@ -1,0 +1,12 @@
+.ArticleTag__container {
+    height: 0.5vw;
+    display: flex;
+    padding: 0.1vw 0.2vw;
+    border-radius: 1vw;
+    opacity: 60%;
+}
+
+.ArticleTag__container .frontDot {
+    width: 0.1vw;
+    height: 0.1vw;
+}

@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+}
+
+.container .tag {
+    width: auto;
+    white-space: nowrap;
+    padding: 0.3vw 0.5vw 0.2vw 0.5vw;
+    border-radius: 1vw;
+    font-family: "WeiLaiYuan", serif;
+    opacity: 80%;
+    font-weight: 500;
+    font-size: 0.8vw;
+}

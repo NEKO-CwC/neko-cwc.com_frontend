@@ -1,0 +1,166 @@
+@import "color";
+
+@mixin globla-voteUp {
+  font-family: Inter serif;
+  font-weight: 400;
+}
+
+@mixin navigateBar-logo {
+  font-family: "Quicksand", serif;
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+
+@mixin navigateBar-functionArea {
+  position: relative;
+  top: 2px;
+  font-family: "WeiLaiYuan", serif;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin navigateBar-search {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-size: 0.9vw;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin navigateBar-newBlog {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-size: 0.78vw;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin navigateBar-userName {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-size: 0.9vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin navigateBar-userIdentity {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-size: 0.5vw;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin login-continue {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin login-inputHint-default {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin login-inputHint-small {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-size: 0.7vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin login-input {
+  font-family: "Quicksand", serif;
+  opacity: 80%;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1.1vw;
+}
+
+@mixin login-inputErrorMessage {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  color: $login-input-wrong;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.7vw;
+}
+
+@mixin blog-title {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 800;
+  font-size: 2.5vw;
+}
+
+@mixin blog-header-info {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 0.8vw;
+}
+
+
+@mixin blog-authorCard-name {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 1.2vw;
+}
+
+@mixin blog-authorCard-days {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 0.7vw;
+}
+
+@mixin blog-authorCard-lastOnline {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 0.8vw;
+}
+
+@mixin blog-authorCard-tag {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 0.8vw;
+}
+
+
+@mixin blog-commentArea-userName {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 0.8vw;
+}
+
+@mixin blog-commentArea-identity {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 400;
+  font-size: 0.65vw;
+}
+
+@mixin blog-commentArea-createdAt {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 0.4vw;
+}
+
+@mixin blog-commentArea-content {
+  font-family: "WeiLaiYuan", serif;
+  opacity: 80%;
+  font-weight: 500;
+  font-size: 0.7vw;
+}

@@ -1,0 +1,122 @@
+.container {
+    pointer-events: none;
+    user-select: none;
+    position: relative;
+    display: flex;
+    padding-right: 170px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.container .logoContainer {
+    width: 1.8vw;
+    height: 1.8vw;
+    opacity: 80%;
+    overflow: hidden;
+}
+
+.container .logoContainer .logo {
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/svg/navigateBar/search.svg") no-repeat center;
+    transition: transform ease-in-out 0.8s;
+    background-size: contain;
+}
+
+.container .inputContainer {
+    position: relative;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .inputContainer .input {
+    width: 15vw;
+    height: 80%;
+    border: 0;
+    background: none;
+    outline: 0;
+    user-select: auto;
+    pointer-events: auto;
+    transition: width ease-in-out 1s;
+    font-family: "WeiLaiYuan", serif;
+    opacity: 80%;
+    font-size: 0.9vw;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.container .inputContainer .inputHint {
+    position: absolute;
+    top: 80%;
+    left: -15%;
+    width: 19.5vw;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)) no-repeat left bottom;
+    background-size: 0 3px;
+    transition: background-size 0.8s;
+}
+
+.container .confirmContainer {
+    width: 1.8vw;
+    height: 1.8vw;
+    overflow: hidden;
+}
+
+.container .confirmContainer .confirm {
+    pointer-events: auto;
+    user-select: auto;
+    position: relative;
+    transform: translateY(200%);
+    width: 1.8vw;
+    height: 1.8vw;
+    background: url("../../assets/svg/navigateBar/goSearch.svg") no-repeat center;
+    background-size: contain;
+    transition: transform 0.8s ease-in-out;
+}
+
+@keyframes goSearch-merge {
+    0% {
+        top: 100%;
+        rotate: 0deg;
+    }
+    100% {
+        top: 0;
+        rotate: 360deg;
+    }
+}
+
+@keyframes goSearch-hide {
+    0% {
+        top: 0;
+        rotate: 360deg;
+    }
+    100% {
+        top: 100%;
+        rotate: 0deg;
+    }
+}
+
+@keyframes searchLogo-merge {
+    0% {
+        top: auto;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes searchLogo-hide {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: auto;
+    }
+}

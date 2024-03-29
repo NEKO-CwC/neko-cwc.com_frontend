@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2015",
+    "lib": [
+      "DOM",
+      "ES2015",
+      "DOM.Iterable",
+      "ScriptHost"
+    ],
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "jsx": "react",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    // 添加你的类型文件夹路径
+    "types": [
+      "custom"
+    ]
+    // 确保custom类型被包含
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*",
+    "src/modules/declarations.d.ts"
+    // 确保这里正确指向了你的声明文件
+  ]
+}

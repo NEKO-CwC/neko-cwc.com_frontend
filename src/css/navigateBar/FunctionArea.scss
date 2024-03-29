@@ -1,0 +1,45 @@
+@import "../scss/const/font";
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 27px;
+
+  .items {
+    width: 3.3vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      color: rgba(0, 0, 0, 0.80);
+
+      @include navigateBar-functionArea;
+
+      transition: all ease-in-out 0.5s;
+    }
+
+    .upper {
+      top: -2px;
+    }
+  }
+
+  .slider {
+    top: 70%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 2.5vw;
+    border: #00000080 2px solid;
+    height: 0;
+    border-radius: 3px;
+
+    transition: all ease-in-out 0.5s;
+  }
+
+  .slider--blog {
+    left: 1.65vw;
+  }
+}

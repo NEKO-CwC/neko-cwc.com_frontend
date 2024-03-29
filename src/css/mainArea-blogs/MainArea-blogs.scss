@@ -1,0 +1,23 @@
+@import "../scss/const/card";
+
+.container {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-height: 100vh;
+  flex: 1 0 auto;
+  padding: 8vh 15vw 3vh 15vw;
+  gap: 3%;
+
+  .aboutArticle {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vh;
+  }
+}

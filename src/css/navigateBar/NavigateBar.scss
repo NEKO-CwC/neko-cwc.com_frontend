@@ -1,0 +1,31 @@
+@import "../scss/const/_color";
+
+.container {
+  z-index: 10;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5.3vh;
+  min-height: 50px;
+  display: flex;
+
+  border: 3px solid #FFFFFF80;
+  background: linear-gradient(0deg, #FFFFFF80 0%, #FFFFFF80 100%), linear-gradient(90deg, rgba($gradientBlue, 0.09) -0.18%, rgba($gradientRed, 0.20) 100.18%);
+  box-shadow: 0 4px 10.1px 0 rgba($gradientBlack, 0.15);
+  animation: merge 0.5s ease-in-out;
+
+  @keyframes merge {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+}

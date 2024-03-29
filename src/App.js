@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
+
+import MainAreaBlogs from "../../neko-owo.com/src/components/mainArea-blogs/MainArea-blogs";
+import ErrorPage from "./pages/ErrorPage";
+import MainPage from "./pages/MainPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+    const router = createBrowserRouter([{
+        path: "/",
+        element: <MainPage/>,
+        errorElement: <ErrorPage/>,
+        children: [
+            {
+                path: "blog/:blogId",
+                element: <MainAreaBlogs/>
+            },
+            {
+                path: "newBlog",
+                element: <div/>
+            }
+        ]
+    }])
+
+    return (
+        <RouterProvider router={router}/>
+    );
 }
 
 export default App;
+

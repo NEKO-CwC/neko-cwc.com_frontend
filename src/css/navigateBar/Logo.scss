@@ -1,0 +1,35 @@
+@import "../scss/const/font";
+
+.container {
+  display: flex;
+  width: 10%; // 1080p下198px近似值
+  align-items: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.125vw; // 64px近似值
+    height: 3vw; // 48px近似值
+    background-size: cover;
+    background: url("../../logo.svg") center no-repeat;
+
+    animation: App-logo-spin linear infinite 4s;
+  }
+
+  .name {
+    color: #00000080;
+
+    @include navigateBar-logo;
+  }
+}
+
+@keyframes App-logo-spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}

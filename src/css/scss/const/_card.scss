@@ -1,0 +1,7 @@
+@mixin mainArea-card {
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  border: 2px solid #BABABA50;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20);
+}
